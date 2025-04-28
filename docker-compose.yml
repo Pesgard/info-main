@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  frontend:
+    restart: "unless-stopped"
+    build: /proyects/qrcoats_landingpage/.
+    #image: production-zirbox-admin
+    ports:
+      - "3000:80"
+    volumes:
+      - /proyects/qrcoats_landingpage:/app
+      - /app/build/web
+    #command: npx vue-cli-service serve
+    #command: nginx -g daemon off;
